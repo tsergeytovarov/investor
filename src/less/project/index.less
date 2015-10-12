@@ -45,6 +45,7 @@
   margin-right: 22px;
   overflow: hidden;
   position: relative;
+  background: #878787;
 
   &__mask{
     content: "";
@@ -94,6 +95,8 @@
   }
 
   &--blue{
+    background: @blue;
+
     &:hover{
       .project__mask{
         background: @blue;
@@ -109,6 +112,8 @@
   }
 
   &--pink{
+    background: @pink;
+
     &:hover{
       .project__mask{
         background: @pink;
@@ -120,6 +125,54 @@
       &:before{
         background: @pink;
       }
+    }
+  }
+
+  &--ppl{
+    background: @ppl;
+
+    &:hover{
+      .project__mask{
+        background: @ppl;
+        opacity: .7;
+      }
+    }
+
+    &.project--investor{
+      &:before{
+        background: @ppl;
+      }
+    }
+  }
+}
+
+.project-page{
+  .project{
+    width: 260px;
+    height: 260px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    a{
+      display: block;
+      width: 260px;
+      height: 260px;
+    }
+
+    img{
+      display: block;
+      width: 260px;
+      height: 260px;
+    }
+
+    &__title{
+      font-size: 18px;
+      line-height: 20px;
+      border-top: 0;
+    }
+
+    &:nth-child(3n+3){
+      margin-right: 0;
     }
   }
 }
