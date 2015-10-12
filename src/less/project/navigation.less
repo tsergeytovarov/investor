@@ -42,3 +42,33 @@
     }
   }
 }
+
+.second-navigation{
+
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item{
+  }
+
+  &__link{
+    display: block;
+    font-family: @pfd-c;
+    font-size: 19px;
+    line-height: 19px;
+    padding-left: 15px;
+    color: #000;
+    padding: 10px 0 5px 15px;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+
+    &:hover,
+    &--active{
+      color: @blue;
+      border-left: 4px solid @blue;
+    }
+  }
+}
