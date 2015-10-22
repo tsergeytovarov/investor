@@ -17,8 +17,8 @@
           <a href="#" class="main-header__lang">ENG</a>
         </div>
         <div class="col s-6 text-right">
-          <a href="#" class="btn btn--login">Вход для инвесторов</a>
-          <a href="#" class="btn btn--around">Задать вопрос</a>
+          <a href="#" class="btn btn--login modal-open" data-modal="modal-login">Вход для инвесторов</a>
+          <a href="#" class="btn btn--around modal-open" data-modal="modal-feedback">Задать вопрос</a>
         </div>
       </div>
       <div class="main-header__middle row row--inline">
@@ -174,8 +174,8 @@
 
   </div>
 
-  <div class="modal__overlay modal__overlay--active"></div>
-  <div class="modal modal--active modal-feedback">
+  <div class="modal__overlay"></div>
+  <div class="modal modal-feedback">
     <a href="#" class="modal__close"></a>
     <div class="modal__title">Обратная связь</div>
     <form action="">
@@ -213,6 +213,26 @@
             <option value="">Предложение</option>
             <option value=""> </option>
           </select>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal modal-login">
+    <a href="#" class="modal__close"></a>
+    <div class="modal__title">Вход</div>
+    <form action="">
+      <div class="row">
+        <div class="col s-6">
+          <label for="i10">Логин</label>
+          <input type="text" id="i10">
+          <label for="i11">Пароль</label>
+          <input type="password" id="i11">
+          <input type="checkbox" id="i12">
+          <label for="i12">Запомнить меня</label>
+          <a href="#" class="modal__link">Напомнить пароль</a>
+          <button type="submit" class="btn btn--submit">Войти</button>
+          <a href="#" class="modal__link modal__link--gray">Зарегистрироваться</a>
         </div>
       </div>
     </form>

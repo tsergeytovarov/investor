@@ -73,6 +73,7 @@
   }
 
   input[type="text"],
+  input[type="password"],
   select,
   textarea{
     font-family: @pfd-c-m;
@@ -142,5 +143,37 @@
 
   input[type="checkbox"]:checked + label::before {
     background: url("../img/ico-check.png") no-repeat center;
+  }
+
+  &__link{
+    display: block;
+    color: @blue;
+    margin-top: 5px;
+
+    &--gray{
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+      color: #696969;
+      margin-left: 10px;
+      line-height: 50px;
+      margin-top: 10px;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.modal-login{
+  .btn--submit{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+  }
+
+  input[type="checkbox"] + label{
+    margin-top: 60px;
   }
 }
