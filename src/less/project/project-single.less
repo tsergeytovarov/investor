@@ -1,0 +1,119 @@
+.single-project{
+
+  &__title{
+    font-family: @pfd-c-b;
+    font-size: 44px;
+    line-height: 40px;
+    color: @blue;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    &--second{
+      font-size: 18px;
+      line-height: 18px;
+      margin: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__small{
+    font-family: @pfd;
+    font-size: 16px;
+    line-height: 39px;
+    color: #878787;
+    margin: 0;
+  }
+
+  &__picture{
+    margin: 0;
+    margin-top: 25px;
+    text-align: center;
+
+    img{
+      max-width: 100%
+    }
+  }
+
+  p{
+    font-family: @pfd-l;
+    font-size: 18px;
+    line-height: 25px;
+    color: #3b3b3b;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  &__list{
+    font-family: @pfd-c-m;
+    font-size: 20px;
+    line-height: 28px;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #3b3b3b;
+    padding: 0;
+
+    li{
+      position: relative;
+      padding-left: 15px;
+
+      &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -2px;
+        left: 0;
+        display: block;
+        border-radius: 50%;
+        background: @blue;
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+
+  p&__bold{
+    font-family: @pfd-c-m;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.project-navigation{
+  margin-top: 90px;
+  font-family: @pfd-c-m;
+  font-size: 18px;
+  line-height: 18px;
+  color: #98999d;
+  text-transform: uppercase;
+
+  &__link{
+    width: 200px;
+    display: block;
+    text-decoration: none;
+    color: #98999d;
+
+    &:hover{
+      opacity: .8;
+    }
+
+    &--prev{
+      width: 140px;
+      float: left;
+      text-align: right;
+      padding-left: 40px;
+      background: url("../img/ico-arrow--back.png") no-repeat left center;
+    }
+
+    &--next{
+      float: right;
+      text-align: left;
+      padding-right: 40px;
+      background: url("../img/ico-arrow--next.png") no-repeat right center;
+    }
+  }
+}
