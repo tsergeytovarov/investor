@@ -1,0 +1,146 @@
+.modal{
+  width: 900px;
+  box-sizing: border-box;
+  padding: 40px 40px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  box-shadow: 0 0 5px 1px @pink;
+  display: none;
+
+  &--active{
+    display: block;
+  }
+
+  &__overlay{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,159,226,0.3);
+    display: none;
+
+    &--active{
+      display: block;
+    }
+  }
+
+  &__title{
+    font-family: @pfd-c-b;
+    font-size: 44px;
+    line-height: 44px;
+    color: @blue;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #b2e2f6;
+  }
+
+  &__close{
+    position: absolute;
+    text-decoration: none;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../img/ico-close.png") no-repeat center;
+    top: 20px;
+    right: 20px;
+  }
+
+  .col:first-child{
+    padding-left: 0;
+  }
+
+  .col:last-child{
+    padding-right: 0;
+  }
+
+  label{
+    font-family: @pfd-c-m;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: @blue;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    display: block;
+  }
+
+  input[type="text"],
+  select,
+  textarea{
+    font-family: @pfd-c-m;
+    font-size: 20px;
+    line-height: 20px;
+    color: #3b3b3b;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    border: 1px solid #b2e2f6;
+    padding: 0 10px;
+    background: #fff;
+    border-radius: 2px;
+
+    &:focus{
+      box-shadow: 0 0 3px 3px #e8f6fc;
+    }
+  }
+
+  select{
+    font-family: @pfd;
+    font-size: 16px;
+  }
+
+  textarea{
+    padding: 10px;
+    height: 120px;
+  }
+
+  input[type="file"]{
+    display: none;
+  }
+
+  input[type="file"] + label{
+    font-size: 13px;
+    display: inline-block;
+    line-height: 13px;
+    padding: 7px 14px;
+    border: 1px solid #b2e2f6;
+    border-radius: 2px;
+    letter-spacing: 3px;
+  }
+
+  input[type="checkbox"]{
+    display: none;
+  }
+
+  input[type="checkbox"] + label{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: @pfd;
+    font-size: 16px!important;
+    line-height: 20px!important;
+    color: #101f35;
+    text-transform: none;
+  }
+
+  input[type="checkbox"] + label::before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    margin: 0 10px 0 0;
+    border: 1px solid #b2e2f6;;
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    background: url("../img/ico-check.png") no-repeat center;
+  }
+}
